@@ -14,13 +14,13 @@
             PreparedStatement PrepararConexao;
             Class.forName("com.mysql.cj.jdbc.Driver");
             
-            String url  = "jdbc:mysql://localhost:3306/bancojsp";
+            String url  = "jdbc:mysql://localhost:3306/aeroporto";
             String user = "root";
             String pwd  = "";
             
             Conexao = DriverManager.getConnection(url, user, pwd);
             
-            String comandoSQL     =("SELECT * FROM tbl_produto");
+            String comandoSQL     =("SELECT (pk_IDflight, fk_boarding_airport, fk_landing_airport, fk_airplane) FROM tbl_flight");
             PrepararConexao       = Conexao.prepareStatement(comandoSQL);
             ResultSet respostaSQL = PrepararConexao.executeQuery();
             
@@ -28,23 +28,23 @@
         
         <table border="1";>
             <tr>
-                <th>Código</th>
-                <th>Nome</th>
-                <th>Marca</th>
-                <th>Preço</th>
+                <th>Código de Voo</th>
+                <th>Cidade de Saída</th>
+                <th>Cidade de Chegada</th>
+                <th>Avião</th>
             </tr>
             <% 
                 while(respostaSQL.next()) {
             %>
             
             <tr>
-                <td><%=respostaSQL.getString("codigo")%></td>
+                <td><%=respostaSQL.getString("Código de Voo")%></td>
             
-                <td><%=respostaSQL.getString("nome")%></td>
+                <td><%=respostaSQL.getString("Cidade de Saída")%></td>
 
-                <td><%=respostaSQL.getString("marca")%></td>
+                <td><%=respostaSQL.getString("Cidade de Chegada")%></td>
 
-                <td><%=respostaSQL.getString("preco")%></td>
+                <td><%=respostaSQL.getString("Avião")%></td>
             </tr>
             
             <%
