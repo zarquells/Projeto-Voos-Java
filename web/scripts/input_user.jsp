@@ -36,8 +36,7 @@
                 
             }
             
-            String query = ("INSERT INTO tbl_client(name_client,  cpf_client, phone_client, birth_cliente, adress_client, email_client, password_client)
-                            VALUES (name, cpf, phone, birth, adress, email, password)");
+           String query = "INSERT INTO tbl_client(name_client, cpf_client, phone_client, birth_cliente, adress_client, email_client, password_client) VALUES (?, ?, ?, ?, ?, ?, ?)";
             try{
                 execute    = conexaoBD.prepareStatement(query);
                 execute.setString(1, name);
@@ -47,7 +46,7 @@
                 execute.setString(5, adress);
                 execute.setString(6, email);
                 execute.setString(7, password);
-                responseBD = execute.executeQuery();
+                responseBD = execute.executeUpdate();
 
                 if (!responseBD.next()) {
                     out.print(responseBD);
