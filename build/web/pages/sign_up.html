@@ -27,20 +27,44 @@
             <h1>Faça seu cadastro aqui!</h1>
             <p>Seja bem-vindo, cadastre-se</p>
 
-            <div class="contaneir_input">
+            <form class="contaneir_input" method="get" action="../scripts/input_user.jsp">
+                <div id="contaneir_name">
+                    <label for="input_name"> Name: </label>
+                    <input type="text" id="input_name" name="name">
+                </div>
+                
+                <div id="contaneir_cpf">
+                    <label for="input_cpf"> CPF: </label>
+                    <input type="text" id="input_cpf" name="cpf">
+                </div>
 
+                <div id="contaneir_phone">
+                    <label for="input_phone"> Phone: </label>
+                    <input type="text" id="input_phone" name="phone">
+                </div>
+
+                <div id="contaneir_birth">
+                    <label for="input_birth"> Birth: </label>
+                    <input type="text" id="input_birth" name="birth">
+                </div>
+
+                <div id="contaneir_adress">
+                    <label for="input_adress"> Adress: </label>
+                    <input type="text" id="input_adress" name="adress">
+                </div>
+                
                 <div id="contaneir_email">
-                    <p> Email: </p>
-                    <input type="text" id="input_email">
+                    <label for="input_email"> Email: </label>
+                    <input type="text" id="input_email" name="email">
                 </div>
-
+               
                 <div id="contaneir_senha">
-                    <p>Senha:  </p>
-                    <input  id="input_senha" type="text">
+                    <label for="input_senha"> Password: </label>
+                    <input type="text" id="input_senha" name="senha">
                 </div>
 
-                <button id="btn_cadastro" onclick="insert_user">Cadastrar</button>
-            </div>
+                <button id="btn_login" type="submit" value="Search">Login</button>
+            </form>
 
             <p>Caso já seja um cliente nosso, <a href="./sign_in.html"> clique aqui</a>. </p>
         </main>
