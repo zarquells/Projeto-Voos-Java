@@ -1,15 +1,53 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Projeto de Voos</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+        <link rel="stylesheet"    href="index.css">
     </head>
     <body>
-        <div>TODO write content</div>
+        <header style="display: flex; margin: 20px 0px 30px 0px; justify-content: space-between;">
+            <div id="logo"> <img src="./img/logo.png" style="width: 45px;"> </div>
+            <nav>
+                <ul style="display: flex; display: flex; gap: 14px;">
+                    <li> <a href="./index.html">            Home    </a> </li>
+                    <li> <a href="./pages/flight.html">     Flights </a> </li>
+                    <li> <a href="./pages/profile.html">    Profile </a> </li>
+                    <li> <a href="./pages/about.html">      About   </a> </li>
+                    <li> <a href="./scripts/exit_user.jsp"> Exit    </a> </li>
+
+                </ul>
+                
+            </nav>
+
+        </header>
+
+        <main>
+            <div class="info">
+                <h1>The news</h1>
+                <hr>
+                <h2>You'll find a plenty of opportunities here!</h2>
+                <p>
+                    Know the program exclusive for own customer: the bilhetes! <br>
+                    With it, you can buy many tickets on discount with us and partners.
+                </p>
+                <span>Read more about it.</span>
+
+            </div>
+
+            <div class="flights">
+                <h1>Avaliable Flights</h1>
+                <hr>
+                <h2>Let's see the flights today</h2>
+                <iframe src="./pages/flight-brev.html" name="centro">
+                </iframe>
+                
+                <span>Show more about it.</span>
+            </div>
+            
+        </main>
+
     </body>
 </html>
